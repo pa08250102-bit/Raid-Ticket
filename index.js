@@ -21,14 +21,14 @@ client.once("clientReady", async () => {
 
 function panel() {
   return new EmbedBuilder()
-    .setTitle("🎫 Central de Atendimento Stumble Raid")
+    .setTitle("🎫 Central de Atendimento Stumble Masters")
     .setDescription(
       "Selecione abaixo o motivo do seu atendimento.\n\n" +
       "📮 **Denúncias**\nAbusos xingamentos falas inapropriadas\n\n" +
       "❓ **Dúvidas**\nTire dúvidas Sobre o jogo Do servidor etc\n\n" +
       "🛒 **Compra**\nAqui você poderá comprar W ou até mesmo Nicks coloridos após abrir o ticket a resposta será direta sobre o valor dos produtos\n\n" +
       "🛡️ **Suporte**\nCaso tenha bugs no jogo ou Algo do tipo abra q iremos resolver"
-    ).setFooter({ text: "Stumble Raid • Atendimento" });
+    ).setFooter({ text: "Stumble Masters • Atendimento" });
 }
 
 function buttons() {
