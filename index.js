@@ -44,7 +44,7 @@ client.on("interactionCreate", async interaction => {
   try {
     if (interaction.isChatInputCommand()) {
       if (interaction.commandName === "ping")
-        return interaction.reply({ content: "🏓 Pong! O Stumble Raid está online.", ephemeral: true });
+        return interaction.reply({ content: "🏓 Pong! O Stumble Master está online.", ephemeral: true });
 
       if (interaction.commandName === "ticketpanel") {
         if (!interaction.memberPermissions?.has(PermissionsBitField.Flags.ManageGuild))
