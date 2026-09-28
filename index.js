@@ -100,8 +100,8 @@ client.on("interactionCreate", async interaction => {
         .setDescription(`Olá ${interaction.user}!\n\n**Categoria:** ${type}\nExplique o que você precisa e aguarde a equipe.`);
 
       const staffEmbed = new EmbedBuilder()
-        .setTitle("🛡️ Painel Staff")
-        .setDescription("ola respeite o processo e aguarde algum staff atender seu ticket.");
+        .setTitle(")
+        .setDescription(".");
 
       const staffButtons = new ActionRowBuilder().addComponents(
         new ButtonBuilder().setCustomId("ticket_assumir").setLabel("🛡️ Assumir Ticket").setStyle(ButtonStyle.Primary),
@@ -127,7 +127,7 @@ client.on("interactionCreate", async interaction => {
       if (interaction.customId === "ticket_assumir")
         return interaction.reply(`🛡️ Ticket assumido por ${interaction.user}.`);
 
-      await interaction.reply("🔴 Ticket será fechado em 5 segundos.");
+      await interaction.reply("🔴 Ticket será fechado em 10 segundos.");
       setTimeout(() => interaction.channel.delete("Ticket fechado pela equipe").catch(console.error), 5000);
     }
   } catch (err) {
