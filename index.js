@@ -21,14 +21,14 @@ client.once("clientReady", async () => {
 
 function panel() {
   return new EmbedBuilder()
-    .setTitle("🎫 Central de Atendimento Stumble Masters")
+    .setTitle("🎫 Central de Atendimento Stumble Night")
     .setDescription(
       "Selecione abaixo o motivo do seu atendimento.\n\n" +
       "📮 **Denúncias**\nAbusos xingamentos falas inapropriadas\n\n" +
       "❓ **Dúvidas**\nTire dúvidas Sobre o jogo Do servidor etc\n\n" +
       "🛒 **Compra**\nAqui você poderá comprar W ou até mesmo Nicks coloridos após abrir o ticket a resposta será direta sobre o valor dos produtos\n\n" +
       "🛡️ **Suporte**\nCaso tenha bugs no jogo ou Algo do tipo abra q iremos resolver"
-    ).setFooter({ text: "Stumble Masters • Atendimento" });
+    ).setFooter({ text: "Stumble Night • Atendimento" });
 }
 
 function buttons() {
@@ -44,7 +44,7 @@ client.on("interactionCreate", async interaction => {
   try {
     if (interaction.isChatInputCommand()) {
       if (interaction.commandName === "ping")
-        return interaction.reply({ content: "🏓 Pong! O Stumble Master está online.", ephemeral: true });
+        return interaction.reply({ content: "🏓 Pong! O Stumble night está online.", ephemeral: true });
 
       if (interaction.commandName === "ticketpanel") {
         if (!interaction.memberPermissions?.has(PermissionsBitField.Flags.ManageGuild))
@@ -101,7 +101,7 @@ client.on("interactionCreate", async interaction => {
 
       const staffEmbed = new EmbedBuilder()
         .setTitle("🛡️ Painel Staff")
-        .setDescription("Use os botões abaixo para gerenciar este ticket.");
+        .setDescription("ola respeite o processo e aguarde algum staff atender seu ticket.");
 
       const staffButtons = new ActionRowBuilder().addComponents(
         new ButtonBuilder().setCustomId("ticket_assumir").setLabel("🛡️ Assumir Ticket").setStyle(ButtonStyle.Primary),
